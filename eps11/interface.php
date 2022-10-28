@@ -1,7 +1,12 @@
 <?php 
 
-// menggunakan ABSTRACK
-// abstarct digunakan agar sebuah class tidak dapat di instasiasi
+// menggunakan INTERFACE
+// Menurut saya hampir mirip kaya abstract cuman gk boleh ada property
+
+interface info {
+   public function special(); 
+}
+
 
 abstract class anime {
 
@@ -36,9 +41,6 @@ abstract class anime {
                 rating : $this->rating";
     }
 
-    // membuat function abstract
-    abstract public function special () ; 
-
     // membuat fungsi untuk mencetak sesuatu
     public function infoanime (){
         $cetak = "Anime : {$this->judul} <br>
@@ -51,7 +53,8 @@ abstract class anime {
 
 // Membuat overriding
 
-class action extends anime {
+// menggunaka interface
+class action extends anime implements info{
     // property
     public $komen = "komen";
 
@@ -71,7 +74,7 @@ class action extends anime {
     }
 }
 
-class horror extends anime{
+class horror extends anime implements info {
     // property
     public $komen = "komen";
 
