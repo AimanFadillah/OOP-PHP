@@ -2,6 +2,7 @@
 
 require 'init.php';
 
+
 // memasang sebuah objeck
 $anime_naruto = new action ("naruto","action","25 menit","aiman","8,0","gila banget");
 $anime_death = new horror ("Death Note","Psyco","20 menit","aiman","9,0","Siapa Yang Ketakutan!!!!");
@@ -15,5 +16,6 @@ $cetak->dikumpul($anime_mob);
 echo $cetak->isikumpulan();
 
 echo "<br>";
+
 
 ?>

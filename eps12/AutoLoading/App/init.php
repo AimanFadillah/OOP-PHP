@@ -1,7 +1,9 @@
 <?php
 
 spl_autoload_register( function ($class) {
-    require_once 'Anime/' . $class . '.php';
+    require_once __DIR__ . '/Anime/' . $class . '.php';
 } );
+
+
 
 ?>
